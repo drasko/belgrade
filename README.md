@@ -26,7 +26,7 @@ make run
 Point your browser to [http://localhost:8080](http://localhost:8080).
 
 ## Authors
-Main architect and BDFL of Belgrade project is [@drasko][drasko].
+Initiated by [@drasko][drasko].
 
 ## Contributing
 Thank you for your interest in Belgrade and wish to contribute!
@@ -38,3 +38,5 @@ Thank you for your interest in Belgrade and wish to contribute!
 
 ## License
 [Apache-2.0](LICENSE)
+
+[drasko]: https://github.com/drasko
