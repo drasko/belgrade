@@ -2,13 +2,7 @@ WASM_BIN = lib.wasm
 
 all: client server
 
-.PHONY: all client server
-
-clean:
-	rm -rf ${WASM_BIN} server
-
-install:
-	cp ${BUILD_DIR}/* $(GOBIN)
+.PHONY: all client server cli
 
 test:
 	GOCACHE=off go test -v -race -tags test $(shell go list ./... | grep -v 'vendor\|cmd')
@@ -19,5 +13,11 @@ client:
 server:
 	go build -ldflags "-s -w" -o server ./cmd/server/main.go
 
+cli:
+	go build -ldflags "-s -w" -o belgrade ./cmd/cli/main.go
+
 run:
 	./server
+
+clean:
+	rm -rf ${WASM_BIN} server belgrade
